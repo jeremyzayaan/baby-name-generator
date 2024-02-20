@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Baby Name Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      margin-top: 50px;
+    }
+    
+    #generatedName {
+      font-size: 24px;
+      margin: 20px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Baby Name Generator</h1>
+  <div id="generatedName"></div>
+  <button onclick="generateName()">Generate Name</button>
+
+  <script>
+    var names = ["Emma", "Liam", "Olivia", "Noah", "Ava", "Isabella", "Sophia", "Mia", "Charlotte", "Amelia"];
+
+    function generateName() {
+      var randomIndex = Math.floor(Math.random() * names.length);
+      var randomName = names[randomIndex];
+      document.getElementById("generatedName").textContent = randomName;
+    }
+  </script>
+</body>
+</html>
